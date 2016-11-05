@@ -1,0 +1,25 @@
+TERNARY COMPUTER
+  - A ternary computer is a computer that uses Ternary logic (three values) instead of Binary logic (two values).
+  - One early calculating machine built by Thomas Fowler operated in balanced ternary.
+  - The first modern, electronic ternary computer was the Setun, developed in 1958 in the Soviet Union by Niklay Brusentsov.
+  - Some operations (such as representing negative decimals) is more efficient in ternany machines.
+  - Ternary computers may appear in the future via:
+    - Combining an optical computer with the ternary logic system using fiber-optics.
+    - A Josephson Junction using circulating superconducting currents, either clockwise, counterclockwise, or off.
+
+BALANCED TERNARY
+  - In unbalanced ternary, each digit has one of 3 values: 0, 1 or 2.
+  - In balanced ternary, each digit has one of 3 values: −1, 0, or +1; these values may also be simplified to −, 0, +, respectively.
+  - Balanced ternary has several advantages over the ubiquitous binary notation:
+    - The Plus-Minus consistency cuts down on the number of carries in multiple-digit multiplication.
+    - The Rounding-Truncation equivalence cuts down on the number of carries in rounding on fractions.
+    - Native support for ternary operations such as less-equal-greater.
+    - Represent all integers without needing to worry about a separate bit for the minus sign in negative integers.
+
+THOMAS FOWLER
+
+SETUN
+
+DSSP
+
+
