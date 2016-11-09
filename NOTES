@@ -6,6 +6,7 @@ TERNARY COMPUTER
   - Ternary computers may appear in the future via:
     - Combining an optical computer with the ternary logic system using fiber-optics.
     - A Josephson Junction using circulating superconducting currents, either clockwise, counterclockwise, or off.
+  - Bits are known at "Trits" (Ternary Bits).
 
 BALANCED TERNARY
   - Ternary is a number system in which there are three possible values.
@@ -24,10 +25,26 @@ BALANCED TERNARY
       - ++ => (1 * 3^1) + (1 * 3^0) => 3 + 1 => 4
       - -+ => (-1 * 3^1) + (1 * 3^0) => -3 + 1 => 2
       - 0 => (0 * 3^0) => 0
+  - Addition:
+  - Multiplication:
 
 THOMAS FOWLER
+  - N/A for now.
 
 SETUN
+  - A ternary computer developed in 1958 in the Soviet Union at Moscow State University.
+  - A total of 50 machines were built during 1959 - 1965.
+  - Memory consisted of 162 Trits (with an additional 1944 trits on a magnetic drum). About 3.3kb.
+  - In the mid-60s a regular binary computer replaced the Setun. It performed similarly well but cost roughly 2.5 times more to run.
+  - A small team worked on Setun: "A small team completed the project in a very short period of time. In autumn 1956 – when the idea of the trinary code emerged – the lab had four engineers and five technicians plus me. The mechanical manufacturing work on the units, frames, and the circuit boards where the elements were mounted, was done partly in the computer center workshop and partly in the workshops of the Physics Department."
+  - The team built the computer literally from scratch: "The work day began with "morning exercises:" everybody, including the chief, started with five ferrite cores and made preliminary tests on a stand. Using an ordinary sewing needle, they wound fifty-two coils of wire onto each core. Then the cores were passed to the assistants and technicians, who wound power-supply and control cables with five to twelve coils onto them, mounted the cells on printed cards, soldered the diodes, and provided a personal inspection mark. Then, the cells were mounted on the blocks; the signal and power-supply cables were produced next, according to the assembly schemata"
+  - It sold for 27,500 Rubles.
+  - Brusentsov's original Setun computer, an experimental prototype that had faithfully worked for seventeen years, was barbarically destroyed and carted off to the dump
+
+SETUN 70
+  - Successor to the Setun
+  - Developed from 1961 - 1968
+  - It had no instructions in the traditional sense, but consisted primarily of syllables: syllable-addresses, syllable-operations. The syllable's length is equal to 6 trits, or one tryte – a trinary analog of the binary byte. The command length and addresses vary according to need, beginning with the zero-address instruction. In fact, the programmer does not think about instructions but simply writes the expressions that describe the calculations as a stack of operands. These algebraic expressions are program-ready for the processor, but the algebra is supplemented by testing, control and input-output operations. The user can add his own operations to the set of syllables by inputting his own procedures, which do not reduce the computer's performance, but instead provide the ideal conditions for structured programming.
 
 DSSP
 
