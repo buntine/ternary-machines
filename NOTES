@@ -47,5 +47,5 @@ SETUN 70
   - It had no instructions in the traditional sense, but consisted primarily of syllables: syllable-addresses, syllable-operations. The syllable's length is equal to 6 trits, or one tryte – a trinary analog of the binary byte. The command length and addresses vary according to need, beginning with the zero-address instruction. In fact, the programmer does not think about instructions but simply writes the expressions that describe the calculations as a stack of operands. These algebraic expressions are program-ready for the processor, but the algebra is supplemented by testing, control and input-output operations. The user can add his own operations to the set of syllables by inputting his own procedures, which do not reduce the computer's performance, but instead provide the ideal conditions for structured programming.
 
 DSSP
-
-
+  - Dialog System for Structured Programming
+  - DSSP was created in the laboratory of Brousentsov N.P. at the Computer science department of the Moscow State University in 1980.
