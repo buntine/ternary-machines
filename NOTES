@@ -48,4 +48,14 @@ SETUN 70
 
 DSSP
   - Dialog System for Structured Programming
+  - A programming language created for the Setun-70 computer.
   - DSSP was created in the laboratory of Brousentsov N.P. at the Computer science department of the Moscow State University in 1980.
+  - Obscure, hard to find any info in English
+  - Stack-based language similar to Forth.
+  - Uses reverse Polish notation:
+    - SUM OF 1..4: 1 2 3 4  DEEP 1- DO +
+      - Push 1, 2, 3, 4 to stack
+      - Push depth of stack (4) to stack
+      - Push 1- to stack (balanced ternary!)
+      - Initiate DOLOOP (it will repeat next operation until DEEP == 0, applying 1- each iteration, consuming one stack item each time)
+      - Stack looks like: [10]
