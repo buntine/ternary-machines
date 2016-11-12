@@ -1,19 +1,6 @@
-THE MYSTERIOUS TERNARY COMPUTER
 
-There are some things in technology that we just take as universal truths:
+Most people know that computers store data using the binary number system. One of the main reasons for this can be found in the circuitry of modern computers, which are made up of billions of tiny transistors that can be either *on* (1) or *off* (0).
 
-- Computers are just mindless machines that do what we tell them to do;
-- All computable functions can be computed by a Universal Turing Machine;
-- Computers only really understand the binary system of 1 and 0.
+Such a design is so ubiquitous nowadays that it's hard to imagine that computers could operate in any other way. But, in Soviet Russia during the 1950s, they did. Enter *Setun*, a balanced ternary computer developed in 1958 by a small team led by Nikolay Brusentsov at the Moscow State University.
 
-It's the last one that I want to focus on. This is because even though today it's effectively true, it has not always been the case.
-
------
-
-Here is a fact: Computers use the binary system of 1 and 0 to perform calculations.
-
-This just means that ...
-
-It's also not always true!
-
------
+Ok, so before we continue talking any more about Brusentsov and Setun, let me explain a little bit about balanced ternary.
