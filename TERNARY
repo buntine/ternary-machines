@@ -5,9 +5,24 @@ Such a design is so ubiquitous nowadays that it's hard to imagine that computers
 
 Ok, so before we continue talking any more about Brusentsov and Setun, let me explain a little bit about balanced ternary.
 
-Ternary is a number system in which there are *three* possible values. In balanced termany, these three possibilities are *-1*, *0* and *+1*; these values are often simplified to simply *-*, *0* and *+*, respectively. The same rules apply to ternary as to any other numeral system: The right-most symbol, *R*, has it's own value and each successive symbol has it's value multiplied by *3* raised to the power of it's distance, *D* from *R*. For example:
+## Balanced Ternary
+
+Ternary, or Base-3, is a number system in which there are *three* possible values. In balanced ternary, these three possibilities are *-1*, *0* and *+1*; these values are often simplified to simply *-*, *0* and *+*, respectively. The same rules apply to ternary as to any other numeral system: The right-most symbol, *R*, has it's own value and each successive symbol has it's value multiplied by the base, *B*, raised to the power of it's distance, *D* from *R*. For example:
 
 +++-0 = (1 * 3^4) + (1 * 3^3) + (1 * 3^2) + (-1 * 3^1) + (0 * 3^0)
       = 81 + 27 + 9 + -3 + 0
       = 114
 
+And, just to be sure, here are the same rules applied in decimal (base-10):
+
+114 = (1 * 10^2) + (1 * 10^1) + 4
+    = 100 + 10 + 4
+    = 114
+
+Cool? Cool!
+
+## The Birth of Setun
+
+The late 50's were an exciting time in computers: Nathaniel Rochester and his team at IBM had recently developed the first mass-produced, stored-program (a.k.a "modern") computer - the IBM 701. John Backus and his team had invented FORTRAN, the first high-level programming language that was seeing widespread use. And, not to forget, John McCarthy had just invented Lisp as an abstraction over Alonzo Church' Lambda Calculus.
+
+But that was America. 
