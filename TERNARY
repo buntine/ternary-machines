@@ -4,3 +4,10 @@ Most people know that computers store data using the binary number system. One o
 Such a design is so ubiquitous nowadays that it's hard to imagine that computers could operate in any other way. But, in Soviet Russia during the 1950s, they did. Enter *Setun*, a balanced ternary computer developed in 1958 by a small team led by Nikolay Brusentsov at the Moscow State University.
 
 Ok, so before we continue talking any more about Brusentsov and Setun, let me explain a little bit about balanced ternary.
+
+Ternary is a number system in which there are *three* possible values. In balanced termany, these three possibilities are *-1*, *0* and *+1*; these values are often simplified to simply *-*, *0* and *+*, respectively. The same rules apply to ternary as to any other numeral system: The right-most symbol, *R*, has it's own value and each successive symbol has it's value multiplied by *3* raised to the power of it's distance, *D* from *R*. For example:
+
++++-0 = (1 * 3^4) + (1 * 3^3) + (1 * 3^2) + (-1 * 3^1) + (0 * 3^0)
+      = 81 + 27 + 9 + -3 + 0
+      = 114
+
