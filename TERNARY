@@ -52,6 +52,11 @@ As I demonstrated briefly above, in Ternary, there is no need to store a leading
 
 <Show example of rounding>
 
++++++.+-+++ = 121.67
++++++.+-++ = 121.(1 + 3 + -9 + 27) = 22
++++++.+-+ = 121.(1 + -3 + 9) = 7
++++++ = 3^4 + 3^3 + 3^2 + 3^1 + 1
+
 Above we can see that setting the least-significant trits to 0 automatically rounds to the closest power of 3. Cool!
 
 ## Programming with trits and trytes!
