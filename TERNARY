@@ -43,8 +43,12 @@ But that was America. At the same time in Russia, a group of mathematicians and 
 
 The team of ten literally built Setun from scratch, working in a small room filled with laboratory tables (which they also built!). Every morning, the team members began their day by assembling five basic machine elements. They started with a territe core and, using an ordinary sewing needle, wound 52 coils of wire onto it. The core was then handed off to technicians who completed the assembly process and mounted them onto blocks.
 
-Development of Setun lasted two years. Although it was operational after just ten days of testing, which was unheard of at the time. In total, only about 50 machines were produced. And even though Setun machines proved capable of operating successfully for years-on-end in Russia's extreme climate, the entire project was racked with controversy. This was primarily due to the fact the machine was so cheap to produce that the manufacturing plant could not justify it's mass-production.
+Overall, development of Setun lasted two years - although it was operational after just ten days of testing, which was unheard of at the time. In total, only about 50 machines were produced. And even though Setun machines proved capable of operating successfully for years-on-end in Russia's extreme climate, the entire project was racked with controversy. This was primarily due to the fact the machine was so cheap to produce that the manufacturing plant could not justify it's mass-production. Eventually the machines were replaced with binary counterparts that were able to calculate with similar efficiency but at more than twice the cost of operation!
 
 ## But why Ternary?
+
+As I demonstrated briefly above, in Ternary, there is no need to store a leading bit, or "trit" as it is called, to indicate sign. Therefore, there is no concept of "signed" or "unsigned" integers - everything is just an integer. So subtraction is achieved by simply inverting the operand and applying addition (which is implemented similarly to binary machines). This plus-minus consistency is also able to cut down on the number of carries required in multiplication operations. And yet another useful trait of balanced ternary (or any balanced numeral system for that matter!) is the fact that one can implement the rounding of floating-point numbers by truncation, which allows for a simplified implementation of division. For example:
+
+<Show example of rounding>
 
 ## Programming with trits and trytes!
