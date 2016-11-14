@@ -1,3 +1,4 @@
+"Perhaps the prettiest number system of all is the balanced ternary notation" - Donald E. Knuth, The Art of Computer Programming, Vol. 2.
 
 Most people know that computers store data using the binary number system. One of the main reasons for this can be found in the circuitry of modern computers, which are made up of billions of tiny transistors that can be either *on* (1) or *off* (0).
 
@@ -50,5 +51,7 @@ Overall, development of Setun lasted two years - although it was operational aft
 As I demonstrated briefly above, in Ternary, there is no need to store a leading bit, or "trit" as it is called, to indicate sign. Therefore, there is no concept of "signed" or "unsigned" integers - everything is just an integer. So subtraction is achieved by simply inverting the operand and applying addition (which is implemented similarly to binary machines). This plus-minus consistency is also able to cut down on the number of carries required in multiplication operations. And yet another useful trait of balanced ternary (or any balanced numeral system for that matter!) is the fact that one can implement the rounding of floating-point numbers by truncation, which allows for a simplified implementation of division. For example:
 
 <Show example of rounding>
+
+Above we can see that setting the least-significant trits to 0 automatically rounds to the closest power of 3. Cool!
 
 ## Programming with trits and trytes!
