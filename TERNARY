@@ -68,7 +68,7 @@ Above we can see that truncating the trits to the right of the radix point is eq
 
 ## Programming with trits and trytes!
 
-Ok, back to Setun one last time. In the late 60's, Brusentsov developed a more modern machine called "Setun-70" that embodied it's ternarity more directly. The "Tryte" was introduced, which accounted for 6 trits (roughly 9.5 bits). The Setun-70 computer was a stack machine, and so rather than having machine instructions that specifically named registers for input and output, all operations worked on a pushdown stack. In order to accommodate this design, commands were written in reverse Polish notation (a.k.a postfix).
+Ok, back to Setun one last time. In the late 60's, Brusentsov developed a more modern machine called "Setun-70" that embodied it's ternarity more directly. The "Tryte" was introduced, which accounted for 6 trits (roughly 9.5 bits). The Setun-70 computer was a stack machine, and so rather than having machine instructions that specifically named registers for input and output, all operations worked on two pushdown stacks - one for operands (input) and one for return values (output). In order to accommodate this design, commands were written in reverse Polish notation (a.k.a postfix).
 
 In the late 70's, Brusentsov and some of his students developed a programming language for the Setun-70 computer called the Dialog System for Structured Programming (DSSP). Reference material for DSSP in English is not widely available but I have been able to discover that it is a stack-based language (no surprise there) similar to Forth that uses reverse Polish notation. This allows one to write programs in a relatively high-level language yet still feel "close to the metal".
 
@@ -76,10 +76,15 @@ Take the following DSSP program, which sums a bunch of numbers:
 
 1 2 3 4  DEEP 1- DO +
 
-Let's break it down. In the first column we have the instruction, in the second we have the machine state after execution (the stack), and in the third I've provided an explanation:
+Let's break it down. In the first column we have the instruction, in the second we have the machine state after execution (the operand stack), and in the third I've provided an explanation:
 
-1 [1]       Push 1 to the stack
-2 [2 1]     Push 2 to the stack
-3 [3 2 1]   Push 3 to the stack
-4 [4 3 2 1] Push 4 to the stack
+1    [1]            Push 1 to the stack
+2    [2 1]          Push 2 to the stack
+3    [3 2 1]        Push 3 to the stack
+4    [4 3 2 1]      Push 4 to the stack
+DEEP [4 4 3 2 1]    Push "the depth of the stack" (4) to the stack
+1-   [-1 4 4 3 2 1] Push -1 to the stack
+DO   [4 3 2 1]      Initiate LOOP, pop first two items from stack. To control the loop, the first item is applied to the second item until it reaches 0.
++    []             Apply the "+" operation repeatedly until the LOOP terminates, each time popping the top item from the stack.
 
+At the end of execution, the operand stack will be empty and the return stack will contain [10].
