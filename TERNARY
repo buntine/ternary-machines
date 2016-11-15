@@ -8,7 +8,7 @@ Ok, so before we continue talking any more about Brusentsov and Setun, let me ex
 
 ## Balanced Ternary
 
-Ternary, or base-3, is a number system in which there are *three* possible values. In balanced ternary, these three possibilities are *-1*, *0* and *+1*; these values are often simplified to simply *-*, *0* and *+*, respectively. The same rules apply to ternary as to any other numeral system: The right-most symbol, *R*, has it's own value and each successive symbol has it's value multiplied by the base, *B*, raised to the power of it's distance, *D* from *R*. For example:
+Ternary, or base-3, is a number system in which there are *three* possible values. In balanced ternary, these three possibilities are *-1*, *0* and *+1*; these values are often simplified to simply *-*, *0* and *+*, respectively. So we can think of the values as being "balanced" around the mid-point of 0. The same rules apply to ternary as to any other numeral system: The right-most symbol, *R*, has it's own value and each successive symbol has it's value multiplied by the base, *B*, raised to the power of it's distance, *D* from *R*. Uhh, right, maybe I'll just give you an example:
 
 +++-0 = (1 * 3^4) + (1 * 3^3) + (1 * 3^2) + (-1 * 3^1) + 0
       = 81 + 27 + 9 + -3
@@ -57,7 +57,7 @@ To encode 0.2:
        = 0.33 + -0.11 + -0.03 + 0.01
        = 0.2
 
-And to encode 0.8 we must start with a 1 in the most significant digit and inverse the fractional portion (e.g -0.2):
+And to encode 0.8 we must start with a 1 in the most significant digit and then simply inverse the fractional portion (e.g -0.2):
 
 1.-++- = 1 + (-1 * (3^-1)) + (1 * (3^-2)) + (1 * (3^-3)) + (-1 * (3^-4))
        = 1 + (-1 * (3^-1)) + (1 * (3^-2)) + (1 * (3^-3)) + (-1 * (3^-4))
