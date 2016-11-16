@@ -76,7 +76,7 @@ Take the following DSSP program that sums a bunch of numbers:
 
 1 2 3 4  DEEP 1- DO +
 
-Let's break it down. In the first column we have the instruction, in the second we have the machine state after execution (the operand stack), and in the third I've provided an explanation:
+Let's try to break it down. In the first column we have the instruction, in the second we have the machine state after execution (the operand stack), and in the third I've provided an explanation:
 
 1    [1]            Push 1 to the stack
 2    [2 1]          Push 2 to the stack
@@ -92,3 +92,7 @@ At the end of execution, the operand stack will be empty and the return stack wi
 You can read a bit more about DSSP over at [the website of Ivan Tikhonov](http://brokestream.com/daf.txt).
 
 ## The future
+
+The development of balanced ternary machines has all but faded into a small footnote in the annals of computer history. And whilst research into memory cells able to efficiently represent three distinct states has been relatively minimal, there have been some efforts in this area. Particularly, researchers in Japan in the late 90's [described the possibility](http://ieeexplore.ieee.org/document/679270/) of using a Josephson Junction to implement ternary logic. This could be achieved by circulating superconducting currents, either clockwise, counterclockwise, or off. They found that this gave the memory cells a "capability of high speed computation, low power consumption and very simple construction with less number of elements due to the ternary operation".
+
+So, whilst I wouldn't recommend spending any time learning DSSP any time soon, I do believe that much wisdom can be sought by looking into the past! But right now I have to go - I am *+0+* minutes late for a very important meeting!
