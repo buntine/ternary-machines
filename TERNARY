@@ -1,12 +1,10 @@
----
-title: The Balanced Ternary Machines of Soviet Russia
-published: false
-description: 
-cover_image: 
-tags: ternary, history
+shed: false
+description: A look at the balanced ternary notation and it's use in Setun, a Soviet computer. 
+cover_image: http://i.imgur.com/SrWMhFE.jpg
+tags: ternary, history, computer science
 ---
 
-> "Perhaps the prettiest number system of all is the balanced ternary notation" - Donald E. Knuth, The Art of Computer Programming, Vol. 2.
+>"Perhaps the prettiest number system of all is the balanced ternary notation" - Donald E. Knuth, The Art of Computer Programming, Vol. 2.
 
 Most people know that computers store data using the binary number system. One of the main reasons for this can be found in the circuitry of modern computers, which are made up of billions of tiny transistors that can be either **on** (1) or **off** (0).
 
@@ -16,11 +14,11 @@ OK, so before we continue talking any more about Brusentsov and Setun, let me ex
 
 ## Balanced Ternary
 
-Ternary, or base-3, is a number system in which there are *three* possible values: `0`, `1` and `2`. In balanced ternary, these three possibilities are `-1`, `0` and `+1`; these values are often simplified to simply `-`, `0` and `+`, respectively. 
+Ternary, or base-3, is a number system in which there are *three* possible values: `0`, `1` and `2`. In balanced ternary, these three possibilities are `-1`, `0` and `+1`; these values are often simplified to     `-`, `0` and `+`, respectively. 
 
-So, in it's balanced form, we can think of the ternary values as being "balanced" around the mid-point of 0. The same rules apply to ternary as to any other numeral system: The right-most symbol, `R`, has it's own value and each successive symbol has it's value multiplied by the base, `B`, raised to the power of it's distance, `D` from `R`.
+So, in it's balanced form, we can think of the ternary values as being "balanced" around the mid-point of `0`. The same rules apply to ternary as to any other numeral system: The right-most symbol, `R`, has it's own value and each successive symbol has it's value multiplied by the base, `B`, raised to the power of it's distance, `D` from `R`.
 
-Uhh, right, maybe I'll just give you an example:
+Uhh, right, maybe I'll just give you an example. Let's encode `114`:
 
 ```text
 +++-0 = (1 * 3^4) + (1 * 3^3) + (1 * 3^2) + (-1 * 3^1) + 0
@@ -44,9 +42,13 @@ And, just to be sure, here are the same rules applied in decimal (base-10):
     = 114
 ```
 
-Cool. And what if we wanted to represent `-114`? Well in binary and decimal we need to introduce a new symbol, the sign. In a binary computers memory, this would translate to storing a leading bit that would specify the sign. This is the reason we speak about signed and unsigned integers in programming languages.
+Cool?
 
-But in balanced ternary, as we're about to discover, to represent the inverse of a number we simply have to swap all `+`'s with `-`'s and vice versa. We don't need an extra bit of information to represent the sign! Check it out:
+Now,     what if we wanted to represent `-114`? Well, in binary and decimal, we need to introduce a new symbol: the sign. In the main memory of a binary computer, this would translate to storing a leading bit that would specify the sign. This is the reason we speak about `signed` and `unsigned` integers in programming languages.
+
+But in balanced ternary, as we're about to discover, to represent the inverse of a number we simply have to swap all `+`'s with `-`'s and vice versa. We don't need an extra bit of information to represent the sign!
+
+Check it out:
 
 ```text
 ---+0 = (-1 * 3^4) + (-1 * 3^3) + (-1 * 3^2) + (1 * 3^1) + 0
@@ -54,31 +56,36 @@ But in balanced ternary, as we're about to discover, to represent the inverse of
       = -114
 ```
 
-In a moment we will see that this property (and a couple others) of ternary give us some very interesting computational efficiencies, but for now let's go back to talking about the Setun computer.
+In a moment we will see that this property (and a couple others) of balanced ternary give us some very interesting computational efficiencies. But,                 for now, let's go back to talking about the Setun computer.
 
 ## The Birth of Setun
 
-The late 50's were an exciting time in computers: Nathaniel Rochester and his team at IBM had recently developed the first mass-produced, stored-program (a.k.a "modern") computer - the [IBM 701](https://en.wikipedia.org/wiki/IBM_701). John Backus and his team had invented [FORTRAN](https://en.wikipedia.org/wiki/Fortran), the first high-level programming language that was seeing widespread use. And, perhaps most important of all, the first fully-transistorized computers, such as the [TX-0](https://en.wikipedia.org/wiki/TX-0) and the [Philco Transac S-2000](https://en.wikipedia.org/wiki/Philco), were starting to be developed. The path was set for the development of the binary computing machines that have dominated the market ever since.
+The late 50's were an exciting time in computers: Nathaniel Rochester and his team at IBM had recently developed the first mass-produced, stored-program (a.k.a "modern") computer - the [IBM 701](https://en.wikipedia.org/wiki/IBM_701). John Backus and his team had invented [FORTRAN](https://en.wikipedia.org/wiki/Fortran), the first high-level programming language that was seeing widespread use. And, perhaps most important of all, the first fully-transistorized computers, such as     the [TX-0](https://en.wikipedia.org/wiki/TX-0) and the [Philco Transac S-2000](https://en.wikipedia.org/wiki/Philco), were starting to be developed. The path was set for the development of the binary computing machines that have dominated the market ever since.
 
-But that was America. At the same time in Russia, a group of mathematicians and engineers under the guidance of Nikolay Brusentsov and his colleague Sergei Sobolev were devising different ways in which computers could operate. Brusentsov and co. surveyed the array of computers and technological advancements emerging from the West and comprehended their use of transistors to represent binary data. But this was Russia - transistors were not readily available behind the Iron Curtain. And vacuum tubes sucked as much in Russia as they did in the West!
+But that was North America.
 
-So Brusentsov devised an element from miniature ferrite cores and semiconductor diodes that was able to act as a controlled current transformer, which proved to be an effective base for implementing ternary logic. It was found that these elements, compared with their binary counterparts, provided more speed and reliability and required less power to operate.
+At the same time in Russia, a group of mathematicians and engineers under the guidance of Nikolay Brusentsov and his colleague Sergei Sobolev were devising different ways in which computers could operate <sup>1</sup>. Brusentsov and co. surveyed the array of computers and technological advancements emerging from the West and     comprehended their use of transistors to represent binary data. But, let's remember, this was Russia - transistors were not readily available behind the Iron Curtain. And [vacuum tubes](https://en.wikipedia.org/wiki/Vacuum_tube) sucked as much in Russia as they did in the West!
+
+So Brusentsov devised an element from miniature ferrite cores and semiconductor diodes that was able to act as a controlled current transformer, which proved to be an effective base for implementing ternary logic <sup>2</sup>. It was found that these elements, compared with their binary counterparts, provided more speed and reliability and required less power to operate.
 
 The team of ten literally built Setun from scratch, working in a small room filled with laboratory tables (which they also built!). Every morning, the team members began their day by assembling five basic machine elements. They started with a ferrite core and, using an ordinary sewing needle, wound 52 coils of wire onto it. The cores were then handed off to technicians who completed the assembly process and mounted them onto blocks.
 
-Ternary logic was implemented by combining two of these ferrite elements and wiring them in such a way that they could represent three stable states. This approach was successful but did nothing to reduce the number of elements as, in reality, those two ferrite cores could potentially represent two bits, which represents more information (`2^2`) than one ternary "trit" (`3^1`). Alas, at least their power consumption was reduced!
+Ternary logic was implemented by combining two of these ferrite elements and wiring them in such a way that they could represent three stable states. This approach was successful but did nothing to reduce the number of elements required as, in reality, those two ferrite cores could potentially represent two binary bits, which represents more information (`2^2`) than one ternary "trit" (`3^1`). Alas, at least their power consumption was reduced!
+
+Setun operated on numbers made up of 18 trits, meaning one could represent anything between `-387,420,489` and `387,420,489`. A binary computer, on the other hand, would need `~29` bits to reach this capacity.
 
 Overall, development of Setun lasted two years - although it was operational after just ten days of testing, which was unheard of at the time. In total, only about 50 machines were produced. And even though Setun machines proved capable of operating successfully for years-on-end in Russia's extreme climate, the entire project was racked with controversy. This was primarily due to the fact the machine was so cheap to produce that the manufacturing plant could not justify it's mass-production. Eventually the machines were replaced with binary counterparts that were able to calculate with similar efficiency but at more than twice the cost of operation!
 
 ## But why Ternary?
 
-As I demonstrated briefly above, in Ternary, there is no need to store a leading bit, ahem trit, to indicate sign. Therefore, there is no concept of "signed" or "unsigned" integers - everything is just an integer. So subtraction is achieved by simply inverting the operand and applying addition (which is implemented similarly to binary machines). This plus-minus consistency is also able to cut down on the number of carries required in multiplication operations. And yet another useful trait of balanced ternary (or any balanced numeral system for that matter!) is the fact that one can implement rounding on floating-point numbers by blatant truncation, which allows for a simplified implementation of division. This is because of the way balanced ternary represents the fractional portion of real numbers.
+As I demonstrated briefly above, in Ternary, there is no need to store a leading bit, ahem trit, to indicate sign. Therefore, there is no concept of `signed` or `unsigned` integers - everything is just an integer. So subtraction is achieved by simply inverting the operand and applying addition (which is implemented similarly to binary machines). This plus-minus consistency is also able to cut down on the number of carries required in multiplication operations.
+
+Another useful trait of balanced ternary (or any balanced numeral system for that matter!) is the fact that one can implement rounding on floating-point numbers by blatant truncation, which allows for a simplified implementation of division. This is because of the way balanced ternary represents the fractional portion of real numbers.
 
 Let me give you a simple example. Encoding `0.2` looks like this:
 
 ```text
 0.+--+ = 0 + (1 * (3^-1)) + (-1 * (3^-2)) + (-1 * (3^-3)) + (1 * (3^-4))
-       = (1 * (3^-1)) + (-1 * (3^-2)) + (-1 * (3^-3)) + (1 * (3^-4))
        = 0.33 + -0.11 + -0.03 + 0.01
        = 0.2
 ```
@@ -87,7 +94,6 @@ And to encode `0.8` we must start with a `1` in the most significant digit and t
 
 ```text
 1.-++- = 1 + (-1 * (3^-1)) + (1 * (3^-2)) + (1 * (3^-3)) + (-1 * (3^-4))
-       = 1 + (-1 * (3^-1)) + (1 * (3^-2)) + (1 * (3^-3)) + (-1 * (3^-4))
        = 1 + -0.33 + 0.11 + 0.03 + -0.01
        = 0.8
 ```
@@ -98,9 +104,9 @@ Above we can see that truncating the trits to the right of the radix point is eq
 
 OK, back to Setun one last time. In the late 60's, Brusentsov developed a more modern machine called "Setun-70" that embodied it's ternarity more directly. The "Tryte" was introduced, which accounted for 6 trits (roughly 9.5 bits). The Setun-70 computer was a [stack machine](https://en.wikipedia.org/wiki/Stack_machine), and so rather than having machine instructions that specifically named registers for input and output, all operations worked on two pushdown stacks - one for operands (input) and one for return values (output). In order to accommodate this design, commands were written in [reverse Polish notation](https://en.wikipedia.org/wiki/Reverse_Polish_notation) (a.k.a postfix).
 
-In the late 70's, Brusentsov and some of his students developed a programming language for the Setun-70 computer called the Dialog System for Structured Programming (DSSP). Reference material for DSSP in English is not widely available so I'd like to provide a warning here that my knowledge is very limited and *just may* contain some guesswork. That aside, I have been able to discover that it is a stack-based language (no surprise there) similar to [Forth](https://en.wikipedia.org/wiki/Forth_(programming_language)) that uses reverse Polish notation. This allows one to write programs in a relatively high-level language yet still feel "close to the metal". So close, infact, that the authors had the following to say:
+In the late 70's, Brusentsov and some of his students developed a programming language for the Setun-70 computer called the Dialog System for Structured Programming (DSSP). In my research <sup>3</sup>, I have been able to discover that it is a stack-based language (no surprise there) similar to [Forth](https://en.wikipedia.org/wiki/Forth_(programming_language)) that uses reverse Polish notation. This allows one to write programs in a relatively high-level language yet still feel "close to the metal". So close, infact, that the authors had the following to say:
 
-> DSSP was not invented. It was found. That is why DSSP has not versions, but only extensions.
+>DSSP was not invented. It was found. That is why DSSP has not versions, but only extensions.
 
 Take the following DSSP program that sums a bunch of numbers:
 
@@ -127,6 +133,15 @@ You can read a bit more about DSSP over at [the website of Ivan Tikhonov](http:/
 
 ## The future
 
-The development of balanced ternary machines has all but faded into a small footnote in the annals of computer history. And whilst research into memory cells able to efficiently represent three distinct states has been relatively minimal, there have been some efforts in this area. Particularly, researchers in Japan in the late 90's [described the possibility](http://ieeexplore.ieee.org/document/679270/) of using a Josephson Junction to implement ternary logic. This could be achieved by circulating superconducting currents, either clockwise, counterclockwise, or off. They found that this gave the memory cells a "capability of high speed computation, low power consumption and very simple construction with less number of elements due to the ternary operation".
+The development of balanced ternary machines has all but faded into a small footnote in the annals of computer history. And whilst research into memory cells able to efficiently represent three distinct states has been relatively minimal, there have been some efforts in this area.
 
-So, whilst I wouldn't recommend spending any time learning DSSP any time soon, I do believe that much wisdom can be sought by looking into the past! But right now I have to go: I am `+0+` minutes late for a very important meeting!
+Particularly, researchers in Japan in the late 90's [described the possibility](http://ieeexplore.ieee.org/document/679270/) of using a Josephson Junction to implement ternary logic. This could be achieved by circulating superconducting currents, either *clockwise*, *counterclockwise*, or *off*. They found that this gave the memory cells a "capability of high speed computation, low power consumption and very simple construction with less number of elements due to the ternary operation".
+
+But, for the moment at least, I don't think that you'll be hearing much more about balanced ternary computers in the near future. Nor do I think DSSP is going to be the next big thing in programming language fanboism. But I do believe that much wisdom can be sought by [looking into the past](http://computerpionee.rs/).
+
+Thanks for making it this far. Corrections and feedback is very welcome. :)
+
+1. Although Setun was the first electronic device to operate on balanced ternary, tt's worth mentioning that the idea of using balanced ternary in computing devices was first popularized over 100 years before. In 1840, Thomas Fowler [built a calculating machine](http://www.mortati.com/glusker/fowler/fowlerbio.htm) entirely from wood that operated on data in the balanced ternary notation.
+2. A far more accurate description can be found on the [Russian Computer Museum website](http://www.computer-museum.ru/english/setun.htm)
+3. Reference material for DSSP in English is not widely available so I'd like to provide a warning here that my knowledge is very limited and *just may* contain some guesswork.
+4. Cover image originally from the [Moscow University Supercomputing Center](http://hpc.msu.ru/)
